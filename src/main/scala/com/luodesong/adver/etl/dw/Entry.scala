@@ -6,9 +6,16 @@ object Entry {
         //System.setProperty("hadoop.home.dir", "D:\\Huohu\\下载\\hadoop-common-2.2.0-bin-master")
         val appName :String = "dw_release_customer_job"
         val bdp_day_begin:String ="20190613"
-        val bdp_day_end:String ="20190615"
+        val bdp_day_end:String ="20190622"
         // 执行Job
-        TheHandler.theCustomerHandleJob(appName,bdp_day_begin,bdp_day_end)
+        //TheHandler.theCustomerHandleJob(appName,bdp_day_begin,bdp_day_end)
+        //exposure执行job
+        //TheHandler.theExposureHandleJob(appName,bdp_day_begin,bdp_day_end)
+        //注册主题的job
+        //TheHandler.theRegisteHandleJob(appName,bdp_day_begin,bdp_day_end)
+        //点击主题的job
+        TheHandler.theClickHandleJob(appName,bdp_day_begin,bdp_day_end)
+
     }
 
 }
