@@ -1,11 +1,19 @@
 package com.luodesong.adver.etl.dw
 
-import com.luodesong.adver.etl.dw.DWReleaseHandleJob.logger
-import com.luodesong.adver.util.{ConfHelper, GetDateRangeUtil, SparkHelper}
+import com.luodesong.adver.util.{ConfHelperUtil, GetDateRangeUtil, SparkHelperUtil}
 import org.apache.spark.SparkConf
 import org.apache.spark.sql.SparkSession
+import org.slf4j.{Logger, LoggerFactory}
 
-object TheHandler {
+class DWTheHandler {
+
+}
+
+object DWTheHandler {
+
+    // 日志处理
+    val logger: Logger = LoggerFactory.getLogger(DWTheHandler.getClass)
+
     /**
       * 点击主题
       *
@@ -17,9 +25,9 @@ object TheHandler {
         var spark: SparkSession = null
         try {
             // 获取到 spark 配置参数
-            val conf: SparkConf = ConfHelper.createConf(appName)
+            val conf: SparkConf = ConfHelperUtil.createConf(appName)
             // 获取到 spark 上下文
-            spark = SparkHelper.createSpark(conf)
+            spark = SparkHelperUtil.createSpark(conf)
             // 参数校验
             val timeRanges: Seq[String] = GetDateRangeUtil.rangeDates(bdp_day_begin, bdp_day_end)
             for (bdp_day <- timeRanges.reverse) {
@@ -48,9 +56,9 @@ object TheHandler {
         var spark: SparkSession = null
         try {
             // 获取到 spark 配置参数
-            val conf: SparkConf = ConfHelper.createConf(appName)
+            val conf: SparkConf = ConfHelperUtil.createConf(appName)
             // 获取到 spark 上下文
-            spark = SparkHelper.createSpark(conf)
+            spark = SparkHelperUtil.createSpark(conf)
             // 参数校验
             val timeRanges: Seq[String] = GetDateRangeUtil.rangeDates(bdp_day_begin, bdp_day_end)
             for (bdp_day <- timeRanges.reverse) {
@@ -79,9 +87,9 @@ object TheHandler {
         var spark: SparkSession = null
         try {
             // 获取到 spark 配置参数
-            val conf: SparkConf = ConfHelper.createConf(appName)
+            val conf: SparkConf = ConfHelperUtil.createConf(appName)
             // 获取到 spark 上下文
-            spark = SparkHelper.createSpark(conf)
+            spark = SparkHelperUtil.createSpark(conf)
             // 参数校验
             val timeRanges: Seq[String] = GetDateRangeUtil.rangeDates(bdp_day_begin, bdp_day_end)
             for (bdp_day <- timeRanges.reverse) {
@@ -110,9 +118,9 @@ object TheHandler {
         var spark: SparkSession = null
         try {
             // 获取到 spark 配置参数
-            val conf: SparkConf = ConfHelper.createConf(appName)
+            val conf: SparkConf = ConfHelperUtil.createConf(appName)
             // 获取到 spark 上下文
-            spark = SparkHelper.createSpark(conf)
+            spark = SparkHelperUtil.createSpark(conf)
             // 参数校验
             val timeRanges: Seq[String] = GetDateRangeUtil.rangeDates(bdp_day_begin, bdp_day_end)
             for (bdp_day <- timeRanges.reverse) {

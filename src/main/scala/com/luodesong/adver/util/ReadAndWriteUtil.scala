@@ -8,7 +8,7 @@ import scala.collection.mutable
 object ReadAndWriteUtil {
 
     // 处理日志
-    val logger: Logger = LoggerFactory.getLogger(SparkHelper.getClass)
+    val logger: Logger = LoggerFactory.getLogger(SparkHelperUtil.getClass)
 
     /**
       * 读取数据表

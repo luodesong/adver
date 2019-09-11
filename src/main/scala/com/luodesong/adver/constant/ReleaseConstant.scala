@@ -34,4 +34,14 @@ object ReleaseConstant {
 
     val DW_RELEASE_CLICK= "dw_adver.dw_release_click"
 
+    //dm=============================
+    //聚合字段
+    val COL_RELEASE_DEVICE_NUM = "device_num"
+    val COL_RELEASE_USER_COUNT = "user_count"
+    val COL_RELEASE_TOTAL_COUNT = "total_count"
+
+    //结果表
+    val DM_RELEASE_CUSTOMER_SOURCES ="dm_adver.dm_customer_sources"
+    val DM_RELEASE_CUSTOMER_CUBE = "dm_adver.dm_customer_cube"
+
 }

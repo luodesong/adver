@@ -7,9 +7,9 @@ import org.slf4j.{Logger, LoggerFactory}
 /**
   * 生成conf
   */
-object ConfHelper {
+object ConfHelperUtil {
     // 日志处理
-    val logger: Logger = LoggerFactory.getLogger(ConfHelper.getClass)
+    val logger: Logger = LoggerFactory.getLogger(ConfHelperUtil.getClass)
 
     def createConf(appName: String): SparkConf = {
         var conf: SparkConf = null;

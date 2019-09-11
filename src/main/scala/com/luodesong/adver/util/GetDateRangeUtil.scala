@@ -1,6 +1,6 @@
 package com.luodesong.adver.util
 
-import com.luodesong.adver.util.SparkHelper.logger
+import com.luodesong.adver.util.SparkHelperUtil.logger
 
 import scala.collection.mutable.ArrayBuffer
 

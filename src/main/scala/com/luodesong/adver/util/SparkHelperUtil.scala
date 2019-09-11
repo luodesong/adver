@@ -11,10 +11,10 @@ import scala.collection.mutable.ArrayBuffer
 /**
   * 工具类
   */
-object SparkHelper {
+object SparkHelperUtil {
 
     // 处理日志
-    val logger: Logger = LoggerFactory.getLogger(SparkHelper.getClass)
+    val logger: Logger = LoggerFactory.getLogger(SparkHelperUtil.getClass)
 
     /**
       * 创建 SparkSession
@@ -27,6 +27,9 @@ object SparkHelper {
                 .config(sconf)
                 .enableHiveSupport()
                 .getOrCreate()
+
+        //注册自定义函数
+        RegisterUtil.registerFun(spark)
         spark
     }
 }
